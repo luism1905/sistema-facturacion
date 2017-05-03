@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="37aadfd2-752f-4e31-9cea-c5598e83ce06">
+	<property name="ireport.zoom" value="1.1269722013523664"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="107"/>
+	<parameter name="listSecciones" class="java.lang.String"/>
+	<field name="idSeccion" class="java.lang.Integer"/>
+	<field name="curso.nombre" class="java.lang.String"/>
+	<field name="curso.precio" class="java.lang.Float"/>
+	<field name="curso.horas" class="java.lang.Integer"/>
+	<field name="factura.idFactura" class="java.lang.Integer"/>
+	<field name="estudiante.cedula" class="java.lang.String"/>
+	<field name="estudiante.direccion" class="java.lang.String"/>
+	<field name="estudiante.nombreCompleto" class="java.lang.String"/>
+	<field name="estudiante.telefono" class="java.lang.String"/>
+	<field name="factura.fechaEmision" class="java.util.Date"/>
+	<field name="factura.montoTotal" class="java.lang.Float"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-18" y="-20" width="595" height="92" backcolor="#FFFFFF" uuid="bb567e74-66c3-414e-9578-2e87016a0b96"/>
+				<staticText>
+					<reportElement x="403" y="43" width="59" height="20" forecolor="#FF9933" uuid="0a384240-afc7-4b19-b1b0-4ad78b527eca"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Factura]]></text>
+				</staticText>
+				<image>
+					<reportElement x="32" y="19" width="200" height="62" uuid="6ba0cbdf-be6f-48c8-80dd-80d61dfb9292"/>
+					<imageExpression><![CDATA["C:\\Users\\carlos\\Documents\\NetBeansProjects\\Librerias\\cadisystem\\src\\img\\logo-cadif1.jpg"]]></imageExpression>
+				</image>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="477" y="43" width="79" height="20" uuid="4355c3f6-a41d-4ee5-95f3-ec540a85ec31"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{factura.idFactura}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="243" y="65" width="150" height="11" forecolor="#000000" uuid="83d2ce5c-25cd-40cc-b4b6-43b26a765521"/>
+					<textElement textAlignment="Center">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Av. Pedro León Torres con calle 59]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="244" y="77" width="150" height="11" forecolor="#000000" uuid="2b5cc781-0c54-405e-8c2d-f40ec6fb00fe"/>
+					<textElement textAlignment="Center">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[C.C. Sotavento local 28]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="243" y="51" width="150" height="12" forecolor="#000000" uuid="965dbb97-37c7-4f65-b5fa-5092335d244b"/>
+					<textElement textAlignment="Center">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Rif.: J-31093440-1]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="72" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="307" y="23" width="96" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="6cef07a2-942d-449d-8795-a90cba2718d0"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="403" y="23" width="152" height="20" uuid="74d3a1a5-e392-41a6-97ef-b0fe5dfaf5c5"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{estudiante.telefono}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="42" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="4c835c94-ecb8-4398-a58f-ba19014ff5b6"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="307" y="43" width="96" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="08f53017-b39e-48f0-9848-3838a192d2da"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cédula:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="22" width="80" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="3d00cef6-17e0-419e-a3bd-79a19e97f212"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="81" y="23" width="225" height="20" uuid="663a61f5-fbeb-4847-b11b-c00a7bfddb7e"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{estudiante.nombreCompleto}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="81" y="43" width="226" height="20" uuid="b54cc627-14b3-4252-bb24-b6dec486d60e"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{estudiante.direccion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="403" y="42" width="153" height="20" uuid="47dbf013-66d1-4a97-b7a0-19172c308241"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{estudiante.cedula}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="0" width="120" height="22" forecolor="#006699" backcolor="#E6E6E6" uuid="38bebadd-0ec5-4c18-b135-fd2cf60c05a2"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Emisión:]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="124" y="0" width="100" height="22" uuid="73b81f7a-c768-4882-8ad5-469c06e95832"/>
+				<textFieldExpression><![CDATA[$F{factura.fechaEmision}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="307" y="0" width="95" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="8d094b8b-2b49-4c3c-bfb9-f6e8e5354c48"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Horas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="81" y="0" width="226" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="2863d86c-7d41-47c2-bbdf-d64efc540f83"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Curso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="402" y="1" width="152" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="3a416b62-e66a-470a-9388-b37c32fcc8b7"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1" y="0" width="80" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a674987c-1056-4c69-847c-e487e30e8754"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sección]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="2" y="1" width="79" height="20" uuid="1f716ca2-c7bd-4f70-952a-30f422c54fc0"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idSeccion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="402" y="1" width="151" height="20" uuid="2ba2a7f7-df88-4278-9b49-5045864656e4"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{curso.precio}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="81" y="1" width="226" height="20" uuid="4d75c1ab-ef5a-4eec-b430-f522b25fe4c8"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{curso.nombre}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="307" y="1" width="95" height="20" uuid="b487390d-1509-4bc9-a3cf-501cd88eaf4a"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{curso.horas}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="304" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="8dd2bbb3-9635-4f96-8743-68d92c31887d"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="399" y="0" width="153" height="20" uuid="2cbecc41-94d9-4c87-b6a4-14e67d23ae83"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{factura.montoTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="304" y="0" width="96" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="fcd62d00-bd8c-40a8-b5f7-261ab57e705b"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monto Total]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="14"/>
+	</columnFooter>
+</jasperReport>
